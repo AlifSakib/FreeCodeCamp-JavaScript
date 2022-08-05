@@ -8,7 +8,7 @@ var num1 = 4;
 
 var num1 = 3; 22 //Now num will be 3
 
-let ourName = "Oh-My-Posh"
+var ourName = "Oh-My-Posh"
 
 const p = 3.1416; 
 
@@ -115,13 +115,13 @@ var myStr = '<a herf="http://www.example.com" target="_blank">Link</a>'
 
 // !escape sequences in strings
 
-/* 
+/*
 
 Code    Output
 
-\'      Single Quote
-\"      Double Quote
-\\      BackSlash
+\'      Single Quote -> let text= 'It\'s alright.';
+\"      Double Quote -> let text = "We are the so-called \"Vikings\" from the north.";
+\\      BackSlash    -> let text = "The character \\ is called backslash.";
 \n      New Line
 \r      carriage Return
 \b      backspace
@@ -130,8 +130,24 @@ Code    Output
 
 */
 
-// !concatenating string with plus operator 26:48
-// !concatenating string with variables 29:01
+// !concatenating string with plus operator
+
+// String cn be also added by += operator.
+
+var ourStr = "I come first "
+
+ourStr += "I come Secound"
+
+
+// !concatenating string with variables
+
+var ourName = "Oh-My-Posh";
+
+var outStr = `Hello , Our name is ${ourName} , How are ypu ?`
+
+console.log(outStr)
+
+
 // !appending variables to strings 30:15
 // !find a length of string 31:12
 // !bracket notation to find first character in string 32:01
