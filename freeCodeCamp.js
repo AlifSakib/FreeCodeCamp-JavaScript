@@ -148,9 +148,88 @@ var outStr = `Hello , Our name is ${ourName} , How are ypu ?`
 console.log(outStr)
 
 
-// !appending variables to strings 30:15
+// !appending variables to strings
+
+var anAdjective = "Awesome"
+var ourStr = "Ofs is "
+
+ourStr += anAdjective
+
+console.log(ourStr)
+
 // !find a length of string 31:12
-// !bracket notation to find first character in string 32:01
+
+//Example 
+
+var firstNameLength = 0;
+var firstName = "Ada"
+
+firstNameLength = firstName.length
+
+//Setup 
+
+var lastNameLength = 0;
+var lastName = "Lovelace"
+
+lastNameLength = lastName.length
+
+// !bracket notation to find first character in string
+
+var lastNameLength = 0;
+var lastName = "Lovelace"
+
+FirstLetterOfLirstName = lastName[0]
+
+// !Understand String Immutability
+
+//String index are immutable 
+
 // !bracket notation to find Nth character in string34:24
 // !bracket notation to find last character in string34:54
+
+FirstLetterOfLirstName = lastName[lastName.length - 1]
+
+console.log(FirstLetterOfLirstName)
+
 // !word blanks 36:31
+
+function wordBank(myNoun, myAdjective, myVerb, myAdverb ){
+
+    var result = " "
+
+    result += `The ${myAdjective} ${myNoun} ${myVerb} to the store ${myAdverb}`
+    return result
+}
+
+var fullWord = wordBank("dog", "big", "ran", "quickly");
+
+console.log(fullWord)
+
+Arrays
+// !Nest Arrays
+// !Access Array Data
+// !Modify Array Data
+// !Access Multi-Dimensional Arrays
+// !push()
+// !pop()
+// !shift()
+// !unshift()
+// !Shopping List
+// !Write Reusable with Functions
+// !Arguments
+// !Global Scope
+// !Local Scope
+// !Global vs Local Scope in Functions
+// !Return a Value from a Function
+// !Undefined Value returned
+// !Assignment with a Returned Value
+// !Stand in Line
+// !Boolean Values
+// !If Statements
+// !Equality Operators
+// !And / Or Operators
+// !Else Statements
+// !Else If Statements
+// !Logical Order in If Else Statements
+// !Chaining If Else Statements
+// !Golf Code
