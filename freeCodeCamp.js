@@ -84,12 +84,52 @@ a -= 12
 b -= 9 
 c -= 7
 
-// !compound assignment with augmented multiplication 20:20
-// !compound assignment with augmented division 20:52
-// !declare string variables 21:21
-// !escaping literal quotes in strings 22:02
+// !compound assignment with augmented multiplication
+
+a *= 12
+b *= 9 
+c *= 7
+
+// !compound assignment with augmented division
+
+a /= 12
+b /= 9 
+c /= 7
+
+// !declare string variables
+
+var firstName = "Alif"
+var lastName = 'Sakib'
+var global = `Banglades ${firstName}` //backticks
+
+// !escaping literal quotes in strings
+
+var myStr = "I am a \"Single Qupte\" inside \"double quote\" . "
+
+//Output : I am a "Single Qupte" inside "double quote" . 
+
+
 // !quotinq strings with single quotes 22:43
-// !escape sequences in strings 25:19
+
+var myStr = '<a herf="http://www.example.com" target="_blank">Link</a>'
+
+// !escape sequences in strings
+
+/* 
+
+Code    Output
+
+\'      Single Quote
+\"      Double Quote
+\\      BackSlash
+\n      New Line
+\r      carriage Return
+\b      backspace
+\t      tab
+\f      form feed
+
+*/
+
 // !concatenating string with plus operator 26:48
 // !concatenating string with variables 29:01
 // !appending variables to strings 30:15
