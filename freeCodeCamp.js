@@ -225,19 +225,63 @@ var ourData = ourArray[0]
 
 var ourArray = [50,60,70]
 
-ourArray[1] = 45
+ourArray[1] = 45;
 
 
 // !Access Multi-Dimensional Arrays
 
-var myArray = [[1,2,3], [4,5,6], [7,8,9] ,[[10,11,12] ,13 ,14]]
+var myArray = [[1,2,3], [4,5,6], [7,8,9] ,[[10,11,12] ,13 ,14]];
 
-console.log(myArray[3][1][2])
+var myData = myArray[0][0];
 
 // !push()
+var ourArray = ["Stimpson", "J", "Cat"]
+
+ourArray.push(["Happy", "Joy"]) //[ 'Stimpson', 'J', 'Cat', [ 'Happy', 'Joy' ] ]
+
+//Setup
+
+var myArray = [["jhon", 23], ["cat", 2]]
+
+myArray.push(["dog",3])
+
 // !pop()
+
+var ourArray = [1,2,3]
+
+var removedFromOurArray = ourArray.pop();
+
+//Setup 
+
+var myArray = [["Jhon", 23], ["Cat", 2]]
+
+var removedFromMyArray = myArray.pop()
+
+console.log(myArray)
+
 // !shift()
+
+var ourArray = ["Stimpson", "J", ["Cat"]]
+
+var removeFromOurArray = ourArray.shift();
+
+console.log(ourArray)
+console.log(removeFromOurArray)
+
+var myArray = [["Jhon", 23], ["Cat", 2]]
+
+var removeFromMyArray = myArray.shift();
+
+console.log(removeFromMyArray)
+
 // !unshift()
+
+var ourArray = ["Stimpson", "J", "Cat"]
+
+ourArray.unshift(["Happy", 5])
+
+console.log(ourArray)
+
 // !Shopping List
 // !Write Reusable with Functions
 // !Arguments
