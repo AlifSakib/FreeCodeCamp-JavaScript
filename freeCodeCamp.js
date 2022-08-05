@@ -22,9 +22,9 @@ var b;
 var c;
 var d;
 
-//!Caswe Sensitivity in Variables :
+//!Case Sensitivity in Variables :
 
-// -> JavaScript is Case sessitive so take care of it .
+// -> JavaScript is Case sensitive so take care of it .
 // -> Try to write variables using camelCase , Like : firstName .
 
 //!Adding Number
@@ -283,10 +283,68 @@ ourArray.unshift(["Happy", 5])
 console.log(ourArray)
 
 // !Shopping List
+
+var myList = [["cereal", 3], ["milk", 2], ["Bananas", 3], ["Juice", 4], ["egs", 10]]
+
 // !Write Reusable with Functions
+
+function ourReusableFunction(){
+
+    console.log("Heyya, World")
+}
+
+ourReusableFunction();
+
+
+function reusableFunction(){
+
+    console.log("Hello World")
+}
+
+reusableFunction();
+
 // !Arguments
+
+function ourFunctionWithArgs(a, b){  // a and b is perameter .
+    console.log(a - b)
+}
+
+ourFunctionWithArgs(10,5); //Those are the arguments .
+
 // !Global Scope
+
+var myGolobal = 10;
+
+function fun1(){
+
+    oppsGlobal = 5; //if we dont use var keyword then this variable can be use as a global scope .
+
+}
+
+function fun2(){
+
+    var outPut = " "
+
+    if (typeof myGolobal != "undefined"){
+
+        outPut += "myGlobal is : " + myGolobal;
+    }
+
+    if (typeof oppsGlobal != "undefined"){
+
+        outPut += " oppsGlobal is : " + oppsGlobal;
+    }
+
+    console.log(outPut);
+}
+
+fun1();
+fun2();
+
 // !Local Scope
+
+
+
 // !Global vs Local Scope in Functions
 // !Return a Value from a Function
 // !Undefined Value returned
