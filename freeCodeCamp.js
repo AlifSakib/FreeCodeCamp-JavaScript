@@ -195,9 +195,9 @@ console.log(FirstLetterOfLirstName)
 
 function wordBank(myNoun, myAdjective, myVerb, myAdverb ){
 
-    var result = " "
+    var result = ""
 
-    result += `The ${myAdjective} ${myNoun} ${myVerb} to the store ${myAdverb}`
+    result +=`The ${myAdjective} ${myNoun} ${myVerb} to the store ${myAdverb}`
     return result
 }
 
@@ -205,11 +205,35 @@ var fullWord = wordBank("dog", "big", "ran", "quickly");
 
 console.log(fullWord)
 
-Arrays
+// !Arrays
+
+var ourArray = ["Jhon", "23"]
+
+var myArray = ["Quincy", 1] 
+
 // !Nest Arrays
+
+var ourArray = [["The Universe", 42],["Everythig", 101010]]
+
+var myArray = [["Bulls", 23], ["White Sox", 23]]
 // !Access Array Data
+
+var ourArray = [50,60,70]
+
+var ourData = ourArray[0]
 // !Modify Array Data
+
+var ourArray = [50,60,70]
+
+ourArray[1] = 45
+
+
 // !Access Multi-Dimensional Arrays
+
+var myArray = [[1,2,3], [4,5,6], [7,8,9] ,[[10,11,12] ,13 ,14]]
+
+console.log(myArray[3][1][2])
+
 // !push()
 // !pop()
 // !shift()
