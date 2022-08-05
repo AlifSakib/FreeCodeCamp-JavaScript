@@ -399,7 +399,29 @@ function addFive() {
 }
 
 // !Assignment with a Returned Value
+
+var changed = 0;
+function change(num) {
+  return (num + 5) / 6;
+}
+
+changed = change(10);
+console.log(changed);
+
+var process = 0;
+
+function processArg(arr) {
+  var count = 0;
+  for (i = 0; i < arr.length; i++) {
+    count += arr[i];
+  }
+  return count;
+}
+
+console.log(processArg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
 // !Stand in Line
+
 // !Boolean Values
 // !If Statements
 // !Equality Operators
