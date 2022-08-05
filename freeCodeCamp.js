@@ -380,7 +380,24 @@ function myOutfit() {
 console.log(myOutfit());
 console.log(outerWear);
 // !Return a Value from a Function
+
+function minusSeven(num) {
+  return num - 7;
+}
+
+console.log(minusSeven(10));
+
+function timesFive(num) {
+  return num * 5;
+}
+
+console.log(timesFive(5));
 // !Undefined Value returned
+
+function addFive() {
+  sum += 5; // Not returning anything so the output will be undefined
+}
+
 // !Assignment with a Returned Value
 // !Stand in Line
 // !Boolean Values
