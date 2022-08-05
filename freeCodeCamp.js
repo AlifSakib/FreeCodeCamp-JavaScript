@@ -358,7 +358,27 @@ fun2();
 
 // !Local Scope
 
+function fun3() {
+  var result = 5;
+
+  console.log(result);
+}
+
+fun3();
+
+//console.log(result); // error
+
 // !Global vs Local Scope in Functions
+
+var outerWear = "T-Sirt";
+
+function myOutfit() {
+  var outerWear = "Sweater";
+  return outerWear;
+}
+
+console.log(myOutfit());
+console.log(outerWear);
 // !Return a Value from a Function
 // !Undefined Value returned
 // !Assignment with a Returned Value
