@@ -602,10 +602,10 @@ console.log(cc(4));
 
 // !build javascript objects1:49:12
 var ourDog = {
-  name: "Camper",
+  names: "Camper",
   legs: 4,
   tails: 1,
-  friends: ["Everything"],
+  friends: ["Everything!"],
 };
 
 for (var i in ourDog) {
@@ -620,13 +620,51 @@ var value = Object.values(ourDog);
 console.log(keys);
 console.log(value);
 
+var myDog = {
+  name: "Coder",
+  legs: 4,
+  eyes: 2,
+  friend: ["Coffee with Coder"],
+};
+
+myDog.name = "Quincy"; //change name with dot notation
+
+console.log(myDog);
+
+myDog.bark = "bow-wow"; // Add properties in object or  [ ] can also be used.
+
+console.log(myDog);
+
 // !accessing object properties with dot notation1:50:47
 // !accessing object properties with bracket notation1:51:34
 // !accessing object properties with variables1:52:48
 // !updating object properties 1:53:36
 // !add new property to an object 1:54:31
 // !delete properties form an object1:55:19
+
+delete myDog.eyes;
+console.log(myDog);
+
 // !using objects for lookups 1:55:55
+
+function phoneticLookup(val) {
+  var result = " ";
+
+  var lookUp = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+
+  result = lookUp[val];
+
+  return result;
+}
+
+console.log(phoneticLookup("charlie"));
 // !testing objects for properties 1:57:46
 // !manipulating complex objects1:59:15
 // !accessing nested objects 2:01:03
