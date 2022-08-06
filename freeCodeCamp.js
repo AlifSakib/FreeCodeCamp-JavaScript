@@ -470,11 +470,94 @@ console.log(compareEquality(10, "10"));
 // !Golf Code
 
 var names = [
-  "Hole-in-one",
+  "Hole-in-one !",
   "Eagle",
   "Birdie",
   "par",
   "Bogey",
   "Double Bogey",
-  "Go Home",
+  "Go Home !",
 ];
+
+function golfScore(par, strokes) {
+  if (strokes == 1) {
+    return names[0];
+  } else if (strokes <= par - 2) {
+    return names[1];
+  } else if (strokes == par - 1) {
+    return names[2];
+  } else if (strokes == par) {
+    return names[3];
+  } else if (strokes == par + 1) {
+    return names[4];
+  } else if (strokes == par + 2) {
+    return names[5];
+  } else if (strokes >= par + 3) {
+    return names[6];
+  } else {
+    return "Out Of list";
+  }
+}
+
+console.log(golfScore(5, 10));
+
+// !switch statement1:32:14
+// !default option in switch statements 1:35:46
+// !multiple identical options in switch statements 1:37:25
+// !replacing if else chins with switch 1:39:20
+// !returning boolean value form functions1:41:11
+// !returning an early pattern from functions1:42:20
+// !counting cards 1:43:38
+// !build javascript objects1:49:12
+// !accessing object properties with dot notation1:50:47
+// !accessing object properties with bracket notation1:51:34
+// !accessing object properties with variables1:52:48
+// !updating object properties 1:53:36
+// !add new property to an object 1:54:31
+// !delete properties form an object1:55:19
+// !using objects for lookups 1:55:55
+// !testing objects for properties 1:57:46
+// !manipulating complex objects1:59:15
+// !accessing nested objects 2:01:03
+// !accessing nested arrays 2:01:52
+// !record collection 2:03:05
+// !iterate with while oop 2:10:15
+// !iterate with for loops 2:11:34
+// !iterate odd numbers with a for loop 2:13:56
+// !count backwards with a for loop2:15:29
+// !iterative through an array with for loop 2:17:08
+// !nesting for loops 2:19:43
+// !nesting with do..while loops 2:22:45
+// !profile lookup 2:24:12
+// !generate random fractions 2:28:18
+// !generate random whole numbers 2:28:55
+// !generate random whole numbers within a range 2:30:24
+// !use the parseInt function 2:31:47
+// !use the parseInt function with a radix 2:32:37
+// !use the conditional(ternary) operator 2:33:29
+// !use multiple conditional (ternary)operators 2:34:58
+// !difference between the var and let keywords2:36:58
+// !compare scopes of the var and let keywords2:39:05
+// !declare a read-only variable with the const keyword2:41:35
+// !mutate an array declared with const 2:43:41
+// !prevent object mutation 2:44:53
+// !use arrow function to write concise anonymous functions 2:47:17
+// !write arrow functions with parameters 2:48:23
+// !write higher order arrow functions2:49:26
+// !write higher order arrow functions 2:53:05
+// !use the spread operator to evaluate arrays In-Place 2:55:33
+// !use destruction in assignment to assign variables from objects 2:57:18
+// !destructuring assignment with nested objects 3:00:17
+// !use destructuring assignment to assign variables from arrays 3:01:54
+// !use destructuring assignment with the rest operator 3:03:42
+// !create string using template literals 3:06:39
+// !write concise object literal declarations using simple fields 3:10:42
+// !write concise declarative functions 3:12:24
+// !use class syntax to define a constructor function 3:12:59
+// !use getters and setters to control access to an object 3:15:10
+// !understanding the differences between import and require 3:20:25
+// !use export to reuse a code block 3:22:33
+// !use * to import everything from a file 3:23:40
+// !create an export fallback with export default 3:24:50
+// !import a default export 3:25:25
+// !Outro  3:26:18
