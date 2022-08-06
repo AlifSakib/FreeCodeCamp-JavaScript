@@ -601,6 +601,25 @@ cc("A");
 console.log(cc(4));
 
 // !build javascript objects1:49:12
+var ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["Everything"],
+};
+
+for (var i in ourDog) {
+  console.log(i, ourDog[i]);
+}
+
+console.log(ourDog["name"]);
+
+var keys = Object.keys(ourDog);
+
+var value = Object.values(ourDog);
+console.log(keys);
+console.log(value);
+
 // !accessing object properties with dot notation1:50:47
 // !accessing object properties with bracket notation1:51:34
 // !accessing object properties with variables1:52:48
