@@ -502,8 +502,63 @@ function golfScore(par, strokes) {
 console.log(golfScore(5, 10));
 
 // !switch statement1:32:14
+
+function caseInSwitch(val) {
+  var answer = " ";
+
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+
+    default:
+      answer = "Not in the database";
+      break;
+  }
+
+  return answer;
+}
+
+console.log(caseInSwitch(5));
+
 // !default option in switch statements 1:35:46
+
 // !multiple identical options in switch statements 1:37:25
+
+function sequentialSizes(val) {
+  var answer = " ";
+
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Medium";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  return answer;
+}
+
+console.log(sequentialSizes(5));
+
 // !replacing if else chins with switch 1:39:20
 // !returning boolean value form functions1:41:11
 // !returning an early pattern from functions1:42:20
