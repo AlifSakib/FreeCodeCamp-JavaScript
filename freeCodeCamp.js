@@ -664,8 +664,26 @@ function phoneticLookup(val) {
   return result;
 }
 
-console.log(phoneticLookup("charlie"));
+console.log(phoneticLookup("foxtrot"));
 // !testing objects for properties 1:57:46
+var myObj = {
+  gift: "Pony",
+  pet: "kitten",
+  bed: "sleigh",
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+
+console.log(checkObj("gift"));
+console.log(checkObj(""));
+console.log(checkObj("gift"));
+
 // !manipulating complex objects1:59:15
 // !accessing nested objects 2:01:03
 // !accessing nested arrays 2:01:52
