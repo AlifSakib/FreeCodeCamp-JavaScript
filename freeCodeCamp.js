@@ -563,6 +563,43 @@ console.log(sequentialSizes(5));
 // !returning boolean value form functions1:41:11
 // !returning an early pattern from functions1:42:20
 // !counting cards 1:43:38
+
+var count = 0;
+
+function cc(card) {
+  switch (card) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+
+    case 10:
+    case "K":
+    case "Q":
+    case "J":
+    case "A":
+      count--;
+      break;
+  }
+  var holdbet = "Hold";
+  if (count > 0) {
+    holdbet = "Bet";
+  }
+
+  return count + " " + holdbet;
+}
+
+cc(2);
+cc("K");
+cc(10);
+cc("K");
+cc("A");
+console.log(cc(4));
+
 // !build javascript objects1:49:12
 // !accessing object properties with dot notation1:50:47
 // !accessing object properties with bracket notation1:51:34
