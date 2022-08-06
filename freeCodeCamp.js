@@ -422,12 +422,59 @@ console.log(processArg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // !Stand in Line
 
+function nextInLine(arr, item) {
+  arr.push(item);
+
+  var newArray = arr;
+
+  // if (arr.length > 5 && item > arr.length - 1) {
+  //   arr.shift();
+  // }
+  return arr.shift();
+}
+
+var testArr = [1, 2, 3, 4, 5];
+
+console.log("Before : " + JSON.stringify(testArr));
+console.log("Current Serial is : " + nextInLine(testArr, 6));
+console.log("After : " + JSON.stringify(testArr));
+
 // !Boolean Values
 // !If Statements
 // !Equality Operators
+
+function testStrict(val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(12);
+// Here come the double == and  === , The difference is , == doesnot care about the type of it just compare the value . but === care about the tpeof .
 // !And / Or Operators
+
+function compareEquality(a, b) {
+  if (a == b) {
+    return "Equal";
+  }
+
+  return "Not Equal";
+}
+
+console.log(compareEquality(10, "10"));
 // !Else Statements
 // !Else If Statements
 // !Logical Order in If Else Statements
 // !Chaining If Else Statements
 // !Golf Code
+
+var names = [
+  "Hole-in-one",
+  "Eagle",
+  "Birdie",
+  "par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home",
+];
