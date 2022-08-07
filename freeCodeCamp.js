@@ -897,8 +897,7 @@ let answer2 = lookUpProfile("Kristian", "number");
 let answer3 = lookUpProfile("Sherlock", "lastName");
 let answer4 = lookUpProfile("Harry", "likes");
 let answer5 = lookUpProfile("Bob", "number");
-// let answer2;
-// let answer2;
+
 console.log(answer1);
 console.log(answer2);
 console.log(answer3);
@@ -909,8 +908,28 @@ console.log(answer5);
 // !generate random whole numbers within a range 2:30:24
 // !use the parseInt function 2:31:47
 // !use the parseInt function with a radix 2:32:37
+
+function convertToInteger(str) {
+  return parseInt(str, 2); //This 2 takes the base
+}
+
+let converted = convertToInteger("10011");
+
+console.log(converted);
 // !use the conditional(ternary) operator 2:33:29
+function checkEqual(a, b) {
+  return a === b ? true : false;
+
+  return a === b;
+}
+
 // !use multiple conditional (ternary)operators 2:34:58
+
+function checkSign(num) {
+  return num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
+}
+
+console.log(checkSign(0));
 // !difference between the var and let keywords2:36:58
 // !compare scopes of the var and let keywords2:39:05
 // !declare a read-only variable with the const keyword2:41:35
