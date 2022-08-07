@@ -760,13 +760,9 @@ var collection = {
   },
 };
 
-// var collectionCopy = JSON.parse(JSON.stringify(collection));
-
-// console.log(collectionCopy);
+var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 function updateRecords(id, prop, value) {
-  if (id != collection[id]) {
-  }
   if (value === "") {
     delete collection[id][prop];
   } else if (prop === "tracks") {
@@ -778,18 +774,136 @@ function updateRecords(id, prop, value) {
 
   return collection;
 }
-
-console.log(updateRecords(1245, "album", "Morning Bird"));
 console.log(collection);
+console.log(updateRecords(1245, "album", "morning"));
+
+console.log("====================================================");
 
 // !iterate with while oop 2:10:15
+
+var i = 0;
+var array = [];
+while (i <= 4) {
+  array.push(i);
+  i++;
+}
+console.log(array);
 // !iterate with for loops 2:11:34
+
+var ourArray = [];
+
+for (i = 0; i <= 10; i++) {
+  ourArray.push(i);
+}
+console.log(ourArray);
 // !iterate odd numbers with a for loop 2:13:56
 // !count backwards with a for loop2:15:29
 // !iterative through an array with for loop 2:17:08
 // !nesting for loops 2:19:43
+
+function multiplyAll(arr) {
+  var product = 1;
+
+  for (i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+
+  return product;
+}
+
+var product = multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
+arr = [
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+];
+console.log(arr[0][1]);
+
+console.log(product);
+
 // !nesting with do..while loops 2:22:45
+
+var myArray = [];
+var i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
+console.log(i, myArray);
 // !profile lookup 2:24:12
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+// var newContacts = [];
+
+// for (var i in contacts) {
+//   console.log(contacts[i]);
+
+//   if (contacts[i].firstName === "Kristian") {
+//     result = contacts[i].lastName;
+//   }
+// }
+
+// console.log(newContacts);
+// console.log(result);
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (var i in contacts) {
+    // console.log(contacts[i]);
+
+    if (contacts[i].firstName === name) {
+      return contacts[i][prop] || "No Such Peoperty";
+    }
+  }
+  // Only change code above this line
+  return "No Such Contact";
+}
+
+let answer1 = lookUpProfile("Akira", "likes");
+let answer2 = lookUpProfile("Kristian", "number");
+let answer3 = lookUpProfile("Sherlock", "lastName");
+let answer4 = lookUpProfile("Harry", "likes");
+let answer5 = lookUpProfile("Bob", "number");
+// let answer2;
+// let answer2;
+console.log(answer1);
+console.log(answer2);
+console.log(answer3);
+console.log(answer4);
+console.log(answer5);
 // !generate random fractions 2:28:18
 // !generate random whole numbers 2:28:55
 // !generate random whole numbers within a range 2:30:24
