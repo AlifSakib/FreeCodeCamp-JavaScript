@@ -685,9 +685,60 @@ console.log(checkObj(""));
 console.log(checkObj("gift"));
 
 // !manipulating complex objects1:59:15
+
+let myMysic = [
+  {
+    artist: "Billy Joel",
+    title: "Piano Man",
+    release_year: 1973,
+    format: ["CD", "8T", "LP"],
+    golf: true,
+  },
+  // Add Record
+  {
+    artist: "Beau Carnes",
+    title: "Cerial Man",
+    release_year: 2003,
+    format: ["Youtube Video"],
+  },
+];
+
+console.log(myMysic[1].format);
 // !accessing nested objects 2:01:03
+
+var myStorage = {
+  car: {
+    inside: {
+      glove_box: "maps",
+      passenger_seat: "crumbs",
+    },
+    outside: {
+      truck: "Jack",
+    },
+  },
+};
+
+var gloveBoxContents = myStorage.car.inside["glove_box"];
+
+console.log(gloveBoxContents);
 // !accessing nested arrays 2:01:52
+
+var myplants = [
+  {
+    type: "flower",
+    list: ["rose", "tulip", "dandelion"],
+  },
+  {
+    type: "trees",
+    list: ["fit", "pine", "brich"],
+  },
+];
+
+var result = myplants[1].list[1];
+
+console.log(result);
 // !record collection 2:03:05
+
 // !iterate with while oop 2:10:15
 // !iterate with for loops 2:11:34
 // !iterate odd numbers with a for loop 2:13:56
