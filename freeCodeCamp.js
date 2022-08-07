@@ -645,7 +645,7 @@ console.log(myDog);
 delete myDog.eyes;
 console.log(myDog);
 
-// !using objects for lookups 1:55:55
+// !using objects for lookups 1:55:55 -------------------------------
 
 function phoneticLookup(val) {
   var result = " ";
@@ -665,7 +665,7 @@ function phoneticLookup(val) {
 }
 
 console.log(phoneticLookup("foxtrot"));
-// !testing objects for properties 1:57:46
+// !testing objects for properties 1:57:46 -----------------------------------
 var myObj = {
   gift: "Pony",
   pet: "kitten",
@@ -684,7 +684,7 @@ console.log(checkObj("gift"));
 console.log(checkObj(""));
 console.log(checkObj("gift"));
 
-// !manipulating complex objects1:59:15
+// !manipulating complex objects1:59:15 ----------------------------
 
 let myMysic = [
   {
@@ -704,7 +704,7 @@ let myMysic = [
 ];
 
 console.log(myMysic[1].format);
-// !accessing nested objects 2:01:03
+// !accessing nested objects 2:01:03 -------------------------------------
 
 var myStorage = {
   car: {
@@ -721,7 +721,7 @@ var myStorage = {
 var gloveBoxContents = myStorage.car.inside["glove_box"];
 
 console.log(gloveBoxContents);
-// !accessing nested arrays 2:01:52
+// !accessing nested arrays 2:01:52 ---------------------------------------
 
 var myplants = [
   {
@@ -737,7 +737,50 @@ var myplants = [
 var result = myplants[1].list[1];
 
 console.log(result);
-// !record collection 2:03:05
+
+// !record collection 2:03:05 ----------------------------------------------
+console.log("====================================================");
+var collection = {
+  2548: {
+    album: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    ablum: "1999",
+    artist: "prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    album: "Abba Gold",
+  },
+};
+
+// var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// console.log(collectionCopy);
+
+function updateRecords(id, prop, value) {
+  if (id != collection[id]) {
+  }
+  if (value === "") {
+    delete collection[id][prop];
+  } else if (prop === "tracks") {
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+  } else {
+    collection[id][prop] = value;
+  }
+
+  return collection;
+}
+
+console.log(updateRecords(1245, "album", "Morning Bird"));
+console.log(collection);
 
 // !iterate with while oop 2:10:15
 // !iterate with for loops 2:11:34
