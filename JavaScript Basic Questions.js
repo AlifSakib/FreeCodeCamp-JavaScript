@@ -14,4 +14,16 @@
 
 // *8 Type of a JavaScript keyword that return type of a variable .
 
-// *9
+// *9 indexOf() method returns the index of a specific value.
+
+// *10 include() check is the item is in the Array .
+
+// *11 comparison operator are used to test for ture or flase
+
+// *12 break means if what im looking for is got then freak , maens stop the loop here .
+
+// *13 continue means if what im looking for is get then skip that thing and go for the next.
+
+// *14 Function => A Block Scope , A set of statement that perform a task when it is called , maintains a relationship with Input and Output.
+
+// *15
