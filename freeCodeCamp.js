@@ -1061,7 +1061,7 @@ function getTempOfTmrw(avgTemperatures) {
   ("Use Strict");
 
   // const tempOfTomorrow = undefined; //Change Line
-  const { tomorrow: tempOfTomorrow } = avgTemperatures; //get the tomorrow field from the avgTemperatures Object and assign it to tempOfTomorrow variable.
+  const { today: tempOfTomorrow } = avgTemperatures; //get the tomorrow field from the avgTemperatures Object and assign it to tempOfTomorrow variable.
 
   return tempOfTomorrow;
 }
@@ -1069,11 +1069,108 @@ function getTempOfTmrw(avgTemperatures) {
 console.log(getTempOfTmrw(AVG_TEMPERATURES));
 // *----------------------------------------------------------------------*
 
+const LOCAL_FORCAST = {
+  today: {
+    min: 72,
+    max: 83,
+  },
+  tomorrow: {
+    min: 73.3,
+    max: 84.6,
+  },
+};
+
+function getMaxOfTmrw(forcast) {
+  "use strict";
+
+  //const maxOfTomorrow = udefined; change line
+
+  const {
+    tomorrow: { max: maxOfTomorrow },
+  } = forcast;
+
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORCAST));
 // !destructuring assignment with nested objects 3:00:17
+
+/* const [z, x] = [1, 2, 3, 4, 5, 6];
+
+console.log(z, x);
+
+let a = 6;
+let b = ((8)[(a, b)] = [b, a]);
+
+console.log(a, b); */
 // !use destructuring assignment to assign variables from arrays 3:01:54
 // !use destructuring assignment with the rest operator 3:03:42
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function removeFirstTwo(list) {
+  const [, , ...ar] = list;
+
+  return ar;
+}
+
+const ar = removeFirstTwo(source);
+
+console.log(ar);
+console.log(source);
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85,
+};
+
+const half = (function () {
+  // return function half(stats) {
+  return function half({ max, min }) {
+    //destructuring;
+
+    // return (stats.max + stats.min) / 2.0; //destructuring;
+    return (max + min) / 2.0;
+  };
+})();
+
+console.log(stats);
+console.log(half(stats));
 // !create string using template literals 3:06:39
+
+const result5 = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "line-break"],
+  skipped: ["id-blacklist", "no-dup-keys"],
+};
+
+function makelist(arr) {
+  const resultDisplayArray = [];
+
+  for (let i = 0; i < arr.length; i++)
+    [resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)];
+
+  return resultDisplayArray;
+}
+
+console.log(makelist(result5.failure));
 // !write concise object literal declarations using simple fields 3:10:42
+
+// const createPerson = (name, age, gender) => {
+//   return {
+//     name: name,
+//     age: age,
+//     gender: gender,
+//   };
+// };
+
+const createPerson = (name, age, gender) => ({ name, age, gender });
+
+console.log(createPerson("Los De", 56, "male"));
 // !write concise declarative functions 3:12:24
 // !use class syntax to define a constructor function 3:12:59
 // !use getters and setters to control access to an object 3:15:10
