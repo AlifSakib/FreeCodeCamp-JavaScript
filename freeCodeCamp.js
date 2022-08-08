@@ -1015,10 +1015,60 @@ const increment = function () {
   };
 };
 
-console.log(incement(5, 4));
+console.log(increment(5, 4));
 console.log(increment(5)); // As we set the value = 1 so if we dont pass the value it will be 1 by defult.
 // !use the spread operator to evaluate arrays In-Place 2:55:33
+
+/* const add = (function () {
+  return function add(...arg) {
+    return arg.reduce((a, b) => a + b, 0);
+  };
+})();
+
+console.log(add(1, 2, 3, 4)); */
+
+// !spread operator
+
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+
+let arr2;
+
+(function () {
+  arr2 = [...arr1];
+  arr[0] = "potato";
+})();
+
+console.log(arr2);
 // !use destruction in assignment to assign variables from objects 2:57:18
+// *----------------------------------------------------------------------*
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+console.log(voxel);
+
+// var x = voxel.x;
+
+// var y = voxel.y;
+
+// var z = voxel.z;
+
+const { x: m, y: n, z: o } = voxel; // Quicker Way Of Assigning thing from a object in variables
+
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79,
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  ("Use Strict");
+
+  // const tempOfTomorrow = undefined; //Change Line
+  const { tomorrow: tempOfTomorrow } = avgTemperatures; //get the tomorrow field from the avgTemperatures Object and assign it to tempOfTomorrow variable.
+
+  return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+// *----------------------------------------------------------------------*
+
 // !destructuring assignment with nested objects 3:00:17
 // !use destructuring assignment to assign variables from arrays 3:01:54
 // !use destructuring assignment with the rest operator 3:03:42
