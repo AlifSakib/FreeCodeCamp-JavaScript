@@ -932,13 +932,91 @@ function checkSign(num) {
 console.log(checkSign(0));
 // !difference between the var and let keywords2:36:58
 // !compare scopes of the var and let keywords2:39:05
+
+function checkScope() {
+  "use strict";
+
+  let i = "function Scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block Scope i Is ", i);
+  }
+  console.log("Function Scope i Is ", i);
+  return i;
+}
+
+checkScope();
 // !declare a read-only variable with the const keyword2:41:35
 // !mutate an array declared with const 2:43:41
 // !prevent object mutation 2:44:53
+
+function freezObj() {
+  "use strict";
+
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+
+  Object.freeze(MATH_CONSTANTS);
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezObj();
+
+console.log(PI);
 // !use arrow function to write concise anonymous functions 2:47:17
+
+//Converting this
+
+var magic = function () {
+  return new Date();
+};
+
+//To This
+
+var magic = () => Date();
 // !write arrow functions with parameters 2:48:23
+
+/* var myConcat = function (arr1, arr2) {
+  return arr1.concat(arr2);
+};
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+//Convert to Arrow Function
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1, 2], [3, 4, 5])); */
+
 // !write higher order arrow functions2:49:26
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squareList = (arr) => {
+  const squareIntegers = arr
+    .filter((num) => Number.isInteger(num) && num > 0)
+    .map((x) => x * x);
+  return squareIntegers;
+};
+
+const squareIntegers = squareList(realNumberArray);
+console.log(squareIntegers);
 // !write higher order arrow functions 2:53:05
+
+const increment = function () {
+  return function increment(number, value = 1) {
+    return number + value;
+  };
+};
+
+console.log(incement(5, 4));
+console.log(increment(5)); // As we set the value = 1 so if we dont pass the value it will be 1 by defult.
 // !use the spread operator to evaluate arrays In-Place 2:55:33
 // !use destruction in assignment to assign variables from objects 2:57:18
 // !destructuring assignment with nested objects 3:00:17
