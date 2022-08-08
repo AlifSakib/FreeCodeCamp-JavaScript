@@ -7,3 +7,11 @@
 // *4.  Camel Case, Snake Case and Pascal Case are the three most common naming conventions.
 
 // *5 Variable names are Case Sensitive
+
+// *6 ParseInt => "20" -> 20
+
+// *7 ParseFloat => "20.23" -> 20.23
+
+// *8 Type of a JavaScript keyword that return type of a variable .
+
+// *9
