@@ -124,13 +124,38 @@ const phone = [
 ];
 
 function cheapestPhone(phoneList) {
-  let lowestPrice = phoneList[0].price;
+  let lowestPrice = phoneList[0];
   for (let i = 0; i < phoneList.length; i++) {
-    if (phoneList[i].price < lowestPrice) {
-      lowestPrice = phoneList[i].name;
+    if (phoneList[i].price < lowestPrice.price) {
+      lowestPrice = phoneList[i];
     }
   }
   return lowestPrice;
 }
 
 console.log(cheapestPhone(phone));
+
+//!Total cost of the product in a shoping Cart
+
+const shopingCart = [
+  { product: "Shoe", price: 1200, quantity: 2 },
+  { product: "Shirt", price: 2200, quantity: 1 },
+  { product: "Pant", price: 1800, quantity: 2 },
+  { product: "Belt", price: 1000, quantity: 1 },
+  { product: "Watch", price: 800, quantity: 1 },
+];
+
+function totalCost(products) {
+  let total = 0;
+
+  for (i = 0; i < products.length; i++) {
+    total += products[i].price * products[i].quantity;
+  }
+
+  return total;
+}
+
+const expense = totalCost(shopingCart);
+console.log(expense);
+
+//!Multi Layer Discount Price Calculation
