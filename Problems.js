@@ -63,3 +63,37 @@ function findPositiveNumber(numberList) {
 
 let input = findPositiveNumber([1, 2, -8, 5, 7, 0, -1, -8, -9, -5]);
 console.log(input);
+
+// !Prime Number
+
+function checkPrime(number) {
+  for (i = 2; i <= number; i++) {
+    if (number % i === 0) {
+      return `${number} is not a prime number`;
+    } else {
+      return `${number} is a prime Number`;
+    }
+  }
+}
+
+console.log(checkPrime(23));
+
+//! Secound Largest
+
+arr = [10, 20, 60, 30, 55, 40, 50];
+
+let first_largest = 0;
+let secound_largest = 0;
+
+for (i = 0; i < arr.length; i++) {
+  if (arr[i] > first_largest) {
+    first_largest = arr[i];
+  } else if (arr[i] > secound_largest && arr[i] != first_largest) {
+    secound_largest = arr[i];
+  }
+}
+
+console.log(first_largest);
+console.log(secound_largest);
+
+//! Wood Requirments
