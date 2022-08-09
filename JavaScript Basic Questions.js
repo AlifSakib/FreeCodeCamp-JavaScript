@@ -25,5 +25,3 @@
 // *13 continue means if what im looking for is get then skip that thing and go for the next.
 
 // *14 Function => A Block Scope , A set of statement that perform a task when it is called , maintains a relationship with Input and Output.
-
-// *15

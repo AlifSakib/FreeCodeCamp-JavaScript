@@ -1172,11 +1172,25 @@ const createPerson = (name, age, gender) => ({ name, age, gender });
 
 console.log(createPerson("Los De", 56, "male"));
 // !write concise declarative functions 3:12:24
+
+const bicycle = {
+  gear: 2,
+  // setGear: function (newGear) {
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  },
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
 // !use class syntax to define a constructor function 3:12:59
+
 // !use getters and setters to control access to an object 3:15:10
+
 // !understanding the differences between import and require 3:20:25
 // !use export to reuse a code block 3:22:33
 // !use * to import everything from a file 3:23:40
+
 // !create an export fallback with export default 3:24:50
 // !import a default export 3:25:25
 // !Outro  3:26:18
