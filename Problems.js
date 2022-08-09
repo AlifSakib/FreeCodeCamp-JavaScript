@@ -67,7 +67,7 @@ console.log(input);
 // !Prime Number
 
 function checkPrime(number) {
-  for (i = 2; i <= number; i++) {
+  for (i = 0; i < number; i++) {
     if (number % i === 0) {
       return `${number} is not a prime number`;
     } else {
@@ -76,7 +76,7 @@ function checkPrime(number) {
   }
 }
 
-console.log(checkPrime(23));
+console.log(checkPrime(0));
 
 //! Secound Largest
 
@@ -159,3 +159,70 @@ const expense = totalCost(shopingCart);
 console.log(expense);
 
 //!Multi Layer Discount Price Calculation
+
+//
+function bookTicket(quantity) {
+  let first100 = 100;
+  let moreThan100 = 90;
+  let moreThan200 = 70;
+
+  if (quantity <= 100) {
+    totalTicketPriceFor1st100 = quantity * first100;
+    return totalTicketPriceFor1st100;
+  } else if (quantity <= 200) {
+    restPrice1 = (quantity - 100) * moreThan100;
+    totalTicketPriceForMore100 = 100 * first100;
+    totalofMoreThan100 = restPrice1 + totalTicketPriceForMore100;
+    return totalofMoreThan100;
+  } else {
+    first100price = 100 * first100;
+    secound100price = 100 * moreThan100;
+    restOf200 = quantity - 200;
+    restOf200Price = restOf200 * moreThan200;
+    totalOfMoreThan200 = first100price + secound100price + restOf200Price;
+    return totalOfMoreThan200;
+  }
+}
+
+// !Simple Interest
+
+/* Formula : A = P(1+rt)
+
+A	=	final amount
+P	=	initial principal balance
+r	=	annual interest rate
+t	=	time (in years) */
+
+/* function simpleInterest(p, r, t) {
+  let principalBalance = p;
+  let annualInterestRate = r / 100;
+  let time = t;
+
+  let interestTime = annualInterestRate * time;
+  let total = principalBalance * (1 + interestTime);
+
+  return total;
+}
+
+console.log(simpleInterest(10000, 1.2, 1)); */
+
+// !Complex Interest
+
+/* Formula : CI = P( 1 + r/100)^nt - P */
+
+function conpounfFormula(p, r, n, t) {
+  let principalBalance = p;
+  let annualInterestRate = r / 100;
+  let time = t;
+  let numberOfTimesPerYear = n;
+
+  let TotalOfrn = annualInterestRate / numberOfTimesPerYear;
+  let TotalOfnt = numberOfTimesPerYear * time;
+  let totalofrnnt = Math.pow(1 + TotalOfrn, TotalOfnt);
+  let MultiP = principalBalance * totalofrnnt;
+  let result = (MultiP - principalBalance).toFixed(4);
+
+  return result;
+}
+
+console.log(conpounfFormula(10000, 1.2, 3, 1));
