@@ -97,3 +97,23 @@ console.log(first_largest);
 console.log(secound_largest);
 
 //! Wood Requirments
+
+function woodCalculate(chair, table, bed) {
+  let woodForChair = 3;
+  let woodForTable = 10;
+  let woodForBed = 30;
+
+  let totalWoodForChair = chair * woodForChair;
+  console.log(`to make ${chair} wood need ${totalWoodForChair} cft`);
+
+  let totalWoodForTable = table * woodForTable;
+  console.log(`to make ${table} wood need ${totalWoodForTable} cft`);
+
+  let totalWoodForBed = bed * woodForBed;
+  console.log(`to make ${bed} wood need ${totalWoodForBed} cft`);
+
+  let totalWoodForAll = totalWoodForBed + totalWoodForChair + totalWoodForTable;
+  console.log(`So total wood need to make all items is ${totalWoodForAll}`);
+}
+
+woodCalculate(10, 1, 2);
