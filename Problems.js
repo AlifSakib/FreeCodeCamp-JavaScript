@@ -99,21 +99,38 @@ console.log(secound_largest);
 //! Wood Requirments
 
 function woodCalculate(chair, table, bed) {
-  let woodForChair = 3;
-  let woodForTable = 10;
-  let woodForBed = 30;
+  const woodForChair = 3;
+  const woodForTable = 10;
+  const woodForBed = 30;
 
   let totalWoodForChair = chair * woodForChair;
-  console.log(`to make ${chair} wood need ${totalWoodForChair} cft`);
-
   let totalWoodForTable = table * woodForTable;
-  console.log(`to make ${table} wood need ${totalWoodForTable} cft`);
-
   let totalWoodForBed = bed * woodForBed;
-  console.log(`to make ${bed} wood need ${totalWoodForBed} cft`);
 
   let totalWoodForAll = totalWoodForBed + totalWoodForChair + totalWoodForTable;
-  console.log(`So total wood need to make all items is ${totalWoodForAll}`);
+  return `Total wood need to make all items is ${totalWoodForAll}`;
 }
 
-woodCalculate(10, 1, 2);
+console.log(woodCalculate(0, 0, 1));
+
+// !Cheapest Phone
+
+const phone = [
+  { name: "I-phone", camera: "32gb", price: 36000, color: "Black" },
+  { name: "Samsung", camera: "32gb", price: 22000, color: "White" },
+  { name: "Htc", camera: "32gb", price: 18000, color: "Blue" },
+  { name: "Xiaomi", camera: "32gb", price: 20000, color: "White" },
+  { name: "Nokia", camera: "32gb", price: 25000, color: "Red" },
+];
+
+function cheapestPhone(phoneList) {
+  let lowestPrice = phoneList[0].price;
+  for (let i = 0; i < phoneList.length; i++) {
+    if (phoneList[i].price < lowestPrice) {
+      lowestPrice = phoneList[i].name;
+    }
+  }
+  return lowestPrice;
+}
+
+console.log(cheapestPhone(phone));
